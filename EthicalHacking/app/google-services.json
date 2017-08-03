@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "64179128847",
+    "firebase_url": "https://app-develop-31688.firebaseio.com",
+    "project_id": "app-develop-31688",
+    "storage_bucket": "app-develop-31688.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64179128847:android:d9262dbedc05c4ca",
+        "android_client_info": {
+          "package_name": "com.example.naveen.ethicalhacking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64179128847-glapms84kfobobrq576obpbmat7sa6sk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGLYCBStC-_eJibentqPC6MfSCpNnVa20"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

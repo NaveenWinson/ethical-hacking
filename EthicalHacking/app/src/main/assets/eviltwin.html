@@ -1,0 +1,34 @@
+<head>
+    <h1>Create an Evil Twin for an Access Point</h1>
+</head>
+<body>
+<p style="text-indent: 80">Let us see how to create an Evil Twin for an access point using Kali Linux and aircrack-ng suite </p>
+<br>
+<br>
+<p>1. Start up Kali Linux. First we need to start the monitor mode in the wireless interface card. Open terminal and type <br><b>airmon-ng start (interface)</b></p>
+<br>
+<img src="eviltwin1.png" alt="Monitor Mode" >
+<br>
+<p>2. Then we have to scan for the access point that we are going to twin. Type <br><b>airodump-ng (interface)</b></p>
+<br>
+<img src="eviltwin2.png" alt="Scanning" >
+<br>
+<p>3. After you have seen the access point, press <b>ctrl+c to stop scanning.</b></p>
+<br>
+<img src="eviltwin3.png" alt="Getting the Access point" >
+<br>
+<p>4. Then we have to duplicate the access point. There is a package called airbase-ng which will start an access point by the mac address and the name that we provide. So type<br><b>airbase-ng -a (mac address of access point) --essid "(name of the access point)" -c (channel of the access point)  (interface)</b></p>
+<br>
+<img src="eviltwin4.png" alt="Creating Evil Twin" >
+<br>
+<p>5. Then we can see the other devices getting associated with your access point. By doing this we can be able to perform the man in the middle attack.</p>
+<br>
+<img src="eviltwin5.png" alt="Result" >
+<br>
+<p>For a clear explanation you can watch the video</p>
+<br>
+<iframe src="https://www.youtube.com/embed/E8U_kPYe8gY" frameborder="0" allowfullscreen></iframe>
+<br>
+<p>If you are unable to watch the video</p>
+<a href="https://www.youtube.com/watch?v=E8U_kPYe8gY">Click Here</a>
+</body>

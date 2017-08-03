@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    android:measureWithLargestChild="false"
+
+    android:textStyle="italic"
+    android:weightSum="1"
+    android:background="#0000bbff">
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="wrap_content"
+        android:layout_height="135dp"
+        android:src="@drawable/image" />
+
+    <fragment xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/item_list"
+        android:name="com.example.naveen.ethicalhacking.ItemListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="296dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        tools:context=".ItemListActivity"
+        tools:layout="@android:layout/list_content"
+        android:textStyle="italic"
+        android:layout_weight="0.65" />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+
+</LinearLayout>

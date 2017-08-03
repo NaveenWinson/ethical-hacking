@@ -1,0 +1,53 @@
+<head>
+    <h1>Hack Wifi Using Aircrack-ng Suite</h1>
+</head>
+<body>
+<p style="text-indent: 80">Let us see how to hack WiFi using Aircrack-ng Suite in Kali Linux. </p>
+<br>
+<p>1.Start up Kali Linux. Open terminal and type <b>airmon-ng</b> to check for the wireless interface device in your system.</p>
+<br>
+<img src="wificrack1.png" alt="airmon-ng" >
+<br>
+<p>2. Then type <br><b>airmon-ng start (interface)</b><br>To start monitor mode in your wireless interface card.</p>
+<br>
+<img src="wificrack2.png" alt="Monitor mode" >
+<br>
+<p>3. Then type<br><b>airodump-ng (interface)</b><br>to start scanning for the nearby WiFi access points.</p>
+<br>
+<img src="wificrack3.png" alt="Scanning" >
+<br>
+<p>4. After that you can see all the acess points. After the desired acecss point has appeared. Press <b>ctrl+c</b> to stop scanning</p>
+<br>
+<img src="wificrack4.png" alt="Finding the AP" >
+<br>
+<p>5. Then type the command <br><b>airodump-ng --bssid (the mac address of access point) -c (channel of access point) --write WPAcrack (interface)</b></p>
+<br>
+<img src="wificrack5.png" alt="airodump-ng for desired AP" >
+<br>
+<p>6. After executing the above command the airodump-ng will concentrate on the given mac address and will capture the handshake and store it in WPAcrack file.</p>
+<br>
+<img src="wificrack6.png" alt="Screen " >
+<br>
+<p>7. For capturing the handshake the devices that are connected to the access point must reauthenticate themself to the access point. There is a command aireplay-ng that will send the deauthenticate packets to the device. Type Command <br><b> aireplay-ng --deauth 100 -a (mac address of access point)  (interface)</b></p>
+<br>
+<img src="wificrack7.png" alt="Creating document" >
+<br>
+<p>8. The above command will deauthenticate the device, Now we should wait till the devices connect back to the access point. After they have sucessfully connected. The airodump-ng will capture the handshake you will now WPA handshake in the top right corner of the airodump-ng screen.</p>
+<br>
+<img src="wificrack8.png" alt="aireplay-ng for deauth" >
+<br>
+<P>9. Now after capturing the handshake we should decrypt it using aircrack-ng. Type <br><b>aircrack-ng WPAcrack-01.cap -w (file location of dictonary text)</b></P>
+<br>
+<img src="wificrack9.png" alt="Successful capturing of handshake" >
+<br>
+<P>10. After some time aircrack-ng will show the key to the access point.</P>
+<br>
+<img src="wificrack10.png" alt="Getting the key and Result" >
+<br>
+<p>For a clear explanation you can watch the video</p>
+<br>
+<iframe src="https://www.youtube.com/embed/SJ_4shV3xPM" frameborder="0" allowfullscreen></iframe>
+<br>
+<p>If you are unable to watch the video</p>
+<a href="https://www.youtube.com/watch?v=SJ_4shV3xPM">Click Here</a>
+</body>
